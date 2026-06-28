@@ -1,3 +1,4 @@
+
 const LoadCategories = () => {
     url = "https://openapi.programming-hero.com/api/categories"
 
@@ -22,6 +23,7 @@ const displayCatergories = (name, id) => {
     categoryContainer.append(categoryName)
 }
 
+const parsePrice = (value) => Number(String(value).replace(/[^\d.]/g, "")) || 0;
 
 const LoadPlants = () => {
     url = "https://openapi.programming-hero.com/api/plants"
@@ -55,7 +57,7 @@ const LoadPlants = () => {
                     <li class="bg-[#DCFCE7] text-[#15803D] rounded-full px-2 py-1">${plant.category}</li>
                     <li class="">৳${plant.price}</li>
                 </ul>
-                <a href="" class="w-full bg-[#15803D] text-white rounded-full text-sm my-2 p-2">Add to Cart</a>
+                <button type="button" class="add-to-cart-btn w-full bg-[#15803D] text-white rounded-full text-sm my-2 p-2" data-name="${plant.name}" data-price="${parsePrice(plant.price)}">Add to Cart</button>
             </div>
         </div>
         `
@@ -83,14 +85,14 @@ const LoadCategoryPlants = (id) => {
         div.innerHTML = `
         <div class="flex p-3 h-full">
             <div class="bg-white p-3 rounded-lg flex flex-col space-y-2">
-                <img src="${plant.image}" alt="" class="rounded-lg md:h-[60%]">
+                <img src="${plant.image}" alt="" class="rounded-lg">
                 <h2 class="text-lg text-left">${plant.name}</h2>
                 <p class="text-[10px] text-left my-2 px-1">${plant.description}</p>
                 <ul class="flex justify-between text-sm mt-auto items-center">
                     <li class="bg-[#DCFCE7] text-[#15803D] rounded-full px-2 py-1">${plant.category}</li>
                     <li class="">৳${plant.price}</li>
                 </ul>
-                <a href="" class="w-full bg-[#15803D] text-white rounded-full text-sm my-2 p-2">Add to Cart</a>
+                <button type="button" class="add-to-cart-btn w-full bg-[#15803D] text-white rounded-full text-sm my-2 p-2" data-name="${plant.name}" data-price="${parsePrice(plant.price)}">Add to Cart</button>
             </div>
         </div>
         `

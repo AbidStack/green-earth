@@ -67,7 +67,7 @@
 
     <!-- main section | tree gallery | category | cart  -->
     <section>
-        <div class="m-[10%] text-center text-2xl font-semibold md:flex md:flex-col">
+        <div class="m-[5%] text-center text-2xl font-semibold md:flex md:flex-col">
             <h2>Choose Your Trees</h2>
             <div class="grid grid-cols-[1fr_5fr_1fr] max-sm:flex max-sm:flex-col">
 
@@ -102,7 +102,13 @@
                 </div>
 
                 <!-- cart -->
-                <div class="border"></div>
+                <div id="cart-container" class="border rounded-lg bg-white p-4 text-left shadow-sm">
+                    <h3 class="text-lg font-semibold mb-3">Cart</h3>
+                    <div id="cart-items" class="space-y-2 text-sm"></div>
+                    <div class="border-t mt-4 pt-3 flex text-xl">
+                        <p class="font-semibold">Total: <span id="cart-total">৳0</span></p>
+                    </div>
+                </div>
 
 
             </div>
@@ -111,6 +117,59 @@
     </section>
 
     <script src="index.js"></script>
+    <script>
+        const cart = [];
+
+        const renderCart = () => {
+            const cartItems = document.getElementById("cart-items");
+            const cartTotal = document.getElementById("cart-total");
+
+            if (!cartItems || !cartTotal) return;
+
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<p class="text-gray-500">Your cart is empty.</p>';
+                cartTotal.textContent = "৳0";
+                return;
+            }
+
+            const total = cart.reduce((sum, item) => sum + item.price, 0);
+            cartItems.innerHTML = cart.map((item, index) => `
+                <div class="flex items-center justify-between gap-2 rounded border p-2">
+                    <div>
+                        <p class="font-medium">${item.name}</p>
+                        <p class="text-xs text-gray-600">৳${item.price}</p>
+                    </div>
+                    <button type="button" class="remove-item-btn text-red-500 text-sm" data-index="${index}">❌</button>
+                </div>
+            `).join("");
+            cartTotal.textContent = `৳${total}`;
+        };
+
+        const addToCart = (name, price) => {
+            cart.push({ name, price: parsePrice(price) });
+            renderCart();
+        };
+
+        document.getElementById("plants-gallery").addEventListener("click", (event) => {
+            const button = event.target.closest(".add-to-cart-btn");
+            if (!button) return;
+
+            addToCart(button.dataset.name, button.dataset.price);
+        });
+
+        document.getElementById("cart-container").addEventListener("click", (event) => {
+            const button = event.target.closest(".remove-item-btn");
+            if (!button) return;
+
+            const index = Number(button.dataset.index);
+            if (!Number.isNaN(index)) {
+                cart.splice(index, 1);
+                renderCart();
+            }
+        });
+
+        renderCart();
+    </script>
 </body>
 
 </html>
