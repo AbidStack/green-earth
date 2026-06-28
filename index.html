@@ -12,14 +12,21 @@
 
     <link rel="stylesheet" href="style.css">
 
+    <!-- fontawesome cdn -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body class="bg-[#F0FDF4]">
 
-    <nav class="bg-[#15803D] text-white flex justify-between px-16 py-6 max-sm:px-4">
+    <!-- navbar | logo | menu | starts here-->
+
+    <nav class="bg-[#15803D] text-white flex justify-between px-16 py-6 max-sm:px-4 items-center">
+
         <div>
             <h1 class="font-semibold text-xl">Green Earth</h1>
         </div>
+
         <div class="max-sm:hidden">
             <ul class="flex space-x-6">
                 <li>About</li>
@@ -27,35 +34,48 @@
                 <li>Plan a Tree</li>
             </ul>
         </div>
-        <div>
+
+        <div class="max-sm:hidden">
             <a href="" class="button">Plant a Tree</a>
+        </div>
+
+        <div class="dropdown sm:hidden">
+            <button class="dropbtn"><i class="fa-solid fa-bars"></i></button>
+            <div class="dropdown-content">
+                <a href="#">About</a>
+                <a href="#">Gallery</a>
+                <a href="#">Plan a Tree</a>
+            </div>
         </div>
     </nav>
 
+    <!-- navbar | logo | menu | ends here-->
+
+
     <section>
         <div class="flex items-center bg-[#CFF0DC] max-sm:flex-col">
-            <div><img src="assets/hero-leaf1.png" alt=""></div>
-            <div class="text-center space-y-4">
+            <div class="self-end"><img src="assets/hero-leaf1.png" alt=""></div>
+            <div class="text-center space-y-4 m-[5%]">
                 <h2 class="text-4xl font-bold">Plant a Tree, Grow a Future</h2>
                 <p class="px-16">Join our mission to plant 1 million trees and make the Earth greener for future
                     generations.</p>
                 <a href="" class="button">Get Involved</a>
             </div>
-            <div><img src="assets/hero-leaf2.png" alt=""></div>
+            <div class="self-end"><img src="assets/hero-leaf2.png" alt=""></div>
         </div>
     </section>
 
     <section>
-        <div class="m-[10%] text-center text-2xl font-semibold max-sm:flex max-sm:flex-col">            
+        <div class="m-[10%] text-center text-2xl font-semibold max-sm:flex max-sm:flex-col">
             <h2>Choose Your Trees</h2>
             <div class="grid grid-cols-[1fr_5fr_1fr] max-sm:flex max-sm:flex-col">
-                
-                
+
+
                 <!-- categories  -->
                 <div class="text-left max-sm:hidden">
                     <h2 class="my-2">Categories</h2>
                     <ul id="fruit-category" class="text-left text-sm space-y-1">
-                        <li>All Trees</li>                        
+                        <li>All Trees</li>
                     </ul>
                 </div>
 
@@ -89,7 +109,7 @@
         </div>
     </section>
 
-<script src="index.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>

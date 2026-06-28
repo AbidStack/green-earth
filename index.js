@@ -46,9 +46,9 @@ const displayPlants = (name) => {
         <div class="flex p-3 h-full">
             <div class="bg-white p-3 rounded-lg flex flex-col">
                 <img src="${plant.image}" alt="" class="rounded-lg h-[60%]">
-                <h2 class="text-lg text-left my-2">${plant.name}</h2>
+                <h2 class="text-lg text-left">${plant.name}</h2>
                 <p class="text-[10px] text-left my-2">${plant.description}</p>
-                <ul class="flex justify-between text-sm mt-auto">
+                <ul class="flex justify-between text-sm mt-auto items-center">
                     <li class="bg-[#DCFCE7] text-[#15803D] rounded-full px-2 py-1">${plant.category}</li>
                     <li class="">৳${plant.price}</li>
                 </ul>
@@ -57,7 +57,7 @@ const displayPlants = (name) => {
         </div>
         `
         plantsCardContainer.append(div)
-        console.log(plant)
+        // console.log(plant)
 
     }
     }
