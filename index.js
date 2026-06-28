@@ -45,7 +45,7 @@ const displayPlants = (name) => {
         div.innerHTML = `
         <div class="flex p-3 h-full">
             <div class="bg-white p-3 rounded-lg flex flex-col">
-                <img src="${plant.image}" alt="" class="rounded-lg h-[60%]">
+                <img src="${plant.image}" alt="" class="rounded-lg md:h-[60%]">
                 <h2 class="text-lg text-left">${plant.name}</h2>
                 <p class="text-[10px] text-left my-2">${plant.description}</p>
                 <ul class="flex justify-between text-sm mt-auto items-center">
