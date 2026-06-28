@@ -15,7 +15,7 @@
 
 /* Style the dropdown button */
 .dropbtn {
-  background-color: #4CAF50;
+  background-color: #3e8e41;
   color: white;
   padding: 16px;
   font-size: 16px;
@@ -31,13 +31,14 @@
   background-color: #f9f9f9;
   min-width: 200px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  right: 0%;
 }
 
 /* Links inside dropdown content */
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
-  text-decoration: none;
+  text-decoration: left;
   display: block;
 }
 
@@ -53,5 +54,5 @@
 
 /* Change background color of dropdown button on hover */
 .dropdown:hover .dropbtn {
-  background-color: #3e8e41;
+  background-color: #4CAF50;
 }
