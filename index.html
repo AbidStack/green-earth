@@ -16,11 +16,11 @@
 
 <body class="bg-[#F0FDF4]">
 
-    <nav class="bg-[#15803D] text-white flex justify-between px-16 py-6">
+    <nav class="bg-[#15803D] text-white flex justify-between px-16 py-6 max-sm:px-4">
         <div>
             <h1 class="font-semibold text-xl">Green Earth</h1>
         </div>
-        <div>
+        <div class="max-sm:hidden">
             <ul class="flex space-x-6">
                 <li>About</li>
                 <li>Gallery</li>
@@ -33,7 +33,7 @@
     </nav>
 
     <section>
-        <div class="flex items-center bg-[#CFF0DC]">
+        <div class="flex items-center bg-[#CFF0DC] max-sm:flex-col">
             <div><img src="assets/hero-leaf1.png" alt=""></div>
             <div class="text-center space-y-4">
                 <h2 class="text-4xl font-bold">Plant a Tree, Grow a Future</h2>
@@ -46,14 +46,13 @@
     </section>
 
     <section>
-        <div class="m-20 border text-center text-2xl font-semibold">            
+        <div class="m-[10%] text-center text-2xl font-semibold max-sm:flex max-sm:flex-col">            
             <h2>Choose Your Trees</h2>
-
-            <div class="grid grid-cols-[1fr_5fr_1fr]">
+            <div class="grid grid-cols-[1fr_5fr_1fr] max-sm:flex max-sm:flex-col">
                 
                 
                 <!-- categories  -->
-                <div class="text-left">
+                <div class="text-left max-sm:hidden">
                     <h2 class="my-2">Categories</h2>
                     <ul id="fruit-category" class="text-left text-sm space-y-1">
                         <li>All Trees</li>                        
@@ -62,7 +61,7 @@
 
 
                 <!-- plants display gallery -->
-                <div id="plants-gallery" class="grid grid-cols-3">
+                <div id="plants-gallery" class="grid grid-cols-3 max-sm:flex max-sm:flex-col">
 
                     <!-- plant card startes here-->
                     <!-- <div class="flex p-3">
