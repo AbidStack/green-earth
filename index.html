@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Green Earth</title>
+
+    <!-- daisy ui + tailwind  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="bg-[#F0FDF4]">
+
+    <nav class="bg-[#15803D] text-white flex justify-between px-16 py-6">
+        <div>
+            <h1 class="font-semibold text-xl">Green Earth</h1>
+        </div>
+        <div>
+            <ul class="flex space-x-6">
+                <li>About</li>
+                <li>Gallery</li>
+                <li>Plan a Tree</li>
+            </ul>
+        </div>
+        <div>
+            <a href="" class="button">Plant a Tree</a>
+        </div>
+    </nav>
+
+    <section>
+        <div class="flex items-center bg-[#CFF0DC]">
+            <div><img src="assets/hero-leaf1.png" alt=""></div>
+            <div class="text-center space-y-4">
+                <h2 class="text-4xl font-bold">Plant a Tree, Grow a Future</h2>
+                <p class="px-16">Join our mission to plant 1 million trees and make the Earth greener for future
+                    generations.</p>
+                <a href="" class="button">Get Involved</a>
+            </div>
+            <div><img src="assets/hero-leaf2.png" alt=""></div>
+        </div>
+    </section>
+
+    <section>
+        <div class="m-20 border text-center text-2xl font-semibold">            
+            <h2>Choose Your Trees</h2>
+
+            <div class="grid grid-cols-[1fr_5fr_1fr]">
+                
+                
+                <!-- categories  -->
+                <div class="text-left">
+                    <h2 class="my-2">Categories</h2>
+                    <ul id="fruit-category" class="text-left text-sm space-y-1">
+                        <li>All Trees</li>                        
+                    </ul>
+                </div>
+
+
+                <!-- plants display gallery -->
+                <div id="plants-gallery" class="grid grid-cols-3">
+
+                    <!-- plant card startes here-->
+                    <!-- <div class="flex p-3">
+                        <div class="bg-white p-3 rounded-lg flex flex-col h-full">
+                            <img src="assets/about.png" alt="" class="rounded-lg h-2/3">
+                            <h2 class="text-lg text-left my-auto">Mango Tree</h2>
+                            <p class="text-[10px] text-left my-auto">A fast-growing tropical tree that produces delicious, juicy mangoes during summer. Its dense green</p>
+                            <ul class="flex justify-between text-sm mt-auto">
+                                <li>Category</li>
+                                <li>price</li>
+                            </ul>
+                            <a href="" class="w-full bg-[#15803D] text-white rounded-full text-sm my-2 p-2">Add to Cart</a>
+                        </div>
+                    </div> -->
+                    <!-- plant card end here-->
+
+                </div>
+
+                <!-- cart -->
+                <div class="border"></div>
+
+
+            </div>
+
+        </div>
+    </section>
+
+<script src="index.js"></script>
+</body>
+
+</html>
